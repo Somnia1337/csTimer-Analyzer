@@ -22,8 +22,8 @@ Features:
 
 The analyzer reads your options from `options.txt`, here's how to write it.
 
-- `ObsidianFlavor(bool)`: Enable or disable Obsidian-flavored markdown, which includes wiki-style image links like "![[image.png]]", and callouts such as "> [!error]". This is `false` by default.
-- `Overview`: Provides an overview of a session, including best and worst times, mean and average, and counts of "+2"s and "DNF"s.
+- `ObsidianFlavor(bool)`: Enable or disable Obsidian-flavored markdown, which includes wiki-style image links like `![[image.png]]`, and callouts such as `> [!error]`. This is `false` by default.
+- `Overview`: Provides an overview of a session, including best and worst times, mean and average, and counts of `+2`s and `DNF`s.
 - `stats`: The metric of statistics, choose one of these:
   - `single`: single solves
   - `mo{n}`: mean of `n` solves

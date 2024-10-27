@@ -22,8 +22,8 @@
 
 分析器会从 `options.txt` 读取分析选项，以下是配置说明。
 
-- `ObsidianFlavor(bool)`：启用或禁用 Obsidian 风格的 Markdown，支持类似 "![[image.png]]" 的 wiki 风格图片链接，和 "> [!error]" 这样的提示框。默认值为 `false`。
-- `Overview`：提供分组的概览，包括最好和最差的时间、平均值、均值，和 "+2" 及 "DNF" 的次数统计。
+- `ObsidianFlavor(bool)`：启用或禁用 Obsidian 风格的 Markdown，支持类似 `![[image.png]]` 的 wiki 风格图片链接，和 `> [!error]` 这样的提示框。默认值为 `false`。
+- `Overview`：提供分组的概览，包括最好和最差的时间、平均值、均值，和 `+2` 及 `DNF` 的次数统计。
 - `stats`：统计的指标，从以下选项中选择一个：
   - `single`：单次成绩
   - `mo{n}`：`n` 次平均成绩
