@@ -4,7 +4,7 @@
 
 一个简单易用的 csTimer 数据分析器，用 Rust 编写。
 
-[这里](https://github.com/Somnia1337/csTimer-Analyzer/blob/main/Analysis.pdf) 是对我的真实数据进行分析产生的报告，作为示例。
+[这里](https://raw.githubusercontent.com/Somnia1337/csTimer-Analyzer/main/Analysis.pdf) 是对我的真实数据进行分析产生的报告，作为示例。
 
 功能特点：
 
@@ -32,7 +32,7 @@
 - `Grouping(stats, millis)`：将指标 `stats` 以 `millis` 毫秒为间隔进行分组，生成直方图。
 - `Trending(stats)`：跟踪指标 `stats` 的趋势，生成趋势图。
 
-下面有 `options.txt` 的实际示例，由它产生的分析报告（并用 Obsidian 导出为 PDF）在 [这里](https://github.com/Somnia1337/csTimer-Analyzer/blob/main/Analysis.pdf)。
+下面有 `options.txt` 的实际示例，由它产生的分析报告（并用 Obsidian 导出为 PDF）在 [这里](https://raw.githubusercontent.com/Somnia1337/csTimer-Analyzer/main/Analysis.pdf)。
 
 ```text
 # 注释以 '#' 开头

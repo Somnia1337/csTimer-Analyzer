@@ -4,7 +4,7 @@ English | [中文](https://github.com/Somnia1337/csTimer-Analyzer/blob/main/READ
 
 An easy-to-use csTimer data analyzer built in Rust.
 
-[Here](https://github.com/Somnia1337/csTimer-Analyzer/blob/main/Analysis.pdf) is the analysis report generated from my real data, as a showcase.
+[Here](https://raw.githubusercontent.com/Somnia1337/csTimer-Analyzer/main/Analysis.pdf) is the analysis report generated from my real data, as a showcase.
 
 Features:
 
@@ -32,7 +32,7 @@ The analyzer reads your options from `options.txt`, here's how to write it.
 - `Grouping(stats, millis)`: Groups `stats` into intervals of `millis` milliseconds, producing a histogram.
 - `Trending(stats)`: Tracks the trend of `stats`, generating a trend chart.
 
-Check below for a real example of `options.txt`, the analysis report generated from it (and exported to PDF with Obsidian) is [here](https://github.com/Somnia1337/csTimer-Analyzer/blob/main/Analysis.pdf).
+Check below for a real example of `options.txt`, the analysis report generated from it (and exported to PDF with Obsidian) is [here](https://raw.githubusercontent.com/Somnia1337/csTimer-Analyzer/main/Analysis.pdf).
 
 ```text
 # Comment starts with '#'
