@@ -31,6 +31,7 @@ The analyzer reads your options from `options.txt`, here's how to write it.
 - `PbHistory(stats)`: Tracks your personal best history for `stats` over time.
 - `Grouping(stats, millis)`: Groups `stats` into intervals of `millis` milliseconds, producing a histogram.
 - `Trending(stats)`: Tracks the trend of `stats`, generating a trend chart.
+- `Commented`: Filters records with a comment(maybe useful if you comment when skipping OLL/PLL).
 
 Check below for a real example of `options.txt`, the analysis report generated from it (and exported to PDF with Obsidian) is [here](https://raw.githubusercontent.com/Somnia1337/csTimer-Analyzer/main/Analysis.pdf).
 
@@ -55,6 +56,9 @@ Grouping(single, 1000)
 # Trending charts
 Trending(mo5)
 Trending(ao200)
+
+# Commented records
+Commented
 ```
 
 ### TODOs

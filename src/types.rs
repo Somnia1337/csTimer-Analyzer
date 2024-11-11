@@ -184,6 +184,7 @@ pub enum Analyze {
     PbHistory(StatsType),
     Grouping(StatsType, Milliseconds),
     Trending(StatsType),
+    Commented,
 }
 
 impl fmt::Display for Analyze {
@@ -199,6 +200,7 @@ impl fmt::Display for Analyze {
                 )
             }
             Analyze::Trending(stats_type) => format!("Trending({})", stats_type),
+            Analyze::Commented => String::from("Commented"),
         };
 
         write!(f, "{}", label)
@@ -244,6 +246,10 @@ impl TryFrom<&str> for Analyze {
                 let stats = StatsType::try_from(inner)?;
                 return Ok(Analyze::Trending(stats));
             }
+        }
+
+        if value == "commented" {
+            return Ok(Analyze::Commented);
         }
 
         Err(ParseAnalysisError::InvalidFormat)

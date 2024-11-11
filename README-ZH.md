@@ -31,6 +31,7 @@
 - `PbHistory(stats)`：指标 `stats` 的个人最佳成绩的历史记录。
 - `Grouping(stats, millis)`：将指标 `stats` 以 `millis` 毫秒为间隔进行分组，生成直方图。
 - `Trending(stats)`：跟踪指标 `stats` 的趋势，生成趋势图。
+- `Commented`：筛选有注释的记录（如果你在跳 O / 跳 P 时写注释，这可能有帮助）。
 
 下面有 `options.txt` 的实际示例，由它产生的分析报告（并用 Obsidian 导出为 PDF）在 [这里](https://raw.githubusercontent.com/Somnia1337/csTimer-Analyzer/main/Analysis.pdf)。
 
@@ -55,6 +56,9 @@ Grouping(single, 1000)
 # 趋势图
 Trending(mo5)
 Trending(ao200)
+
+# 有注释的记录
+Commented
 ```
 
 ### 未完成的

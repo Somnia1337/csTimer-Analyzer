@@ -399,4 +399,14 @@ impl Session {
 
         Ok(())
     }
+
+    /// Filters the records with a comment.
+    pub fn commented_records(&self) -> Vec<(usize, Rc<Record>)> {
+        self.records
+            .iter()
+            .enumerate()
+            .filter(|(_, r)| !r.comment().is_empty())
+            .map(|(i, r)| (i, Rc::clone(r)))
+            .collect()
+    }
 }

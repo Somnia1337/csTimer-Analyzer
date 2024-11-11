@@ -195,6 +195,16 @@ fn append_section(
                 )
             }
         }
+
+        Analyze::Commented => {
+            writeln!(file, "Commented Records\n")?;
+
+            for (i, r) in session.commented_records() {
+                writeln!(file, "[{}] {}", i, r)?;
+            }
+
+            Ok(())
+        }
     }
 }
 
