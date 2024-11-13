@@ -199,8 +199,18 @@ fn append_section(
         Analyze::Commented => {
             writeln!(file, "Commented Records\n")?;
 
-            for (i, r) in session.commented_records() {
-                writeln!(file, "[{}] {}", i, r)?;
+            let commented = session.commented_records();
+            if !commented.is_empty() {
+                for (i, r) in commented {
+                    writeln!(file, "[{}] {}", i, r)?;
+                }
+            } else {
+                append_message(
+                    file,
+                    "error",
+                    String::from("NO COMMENTED RECORD."),
+                    ob_flavor,
+                )?;
             }
 
             Ok(())
