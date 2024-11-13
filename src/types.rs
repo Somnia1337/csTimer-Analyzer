@@ -55,7 +55,7 @@ impl TimeReadable for Seconds {
 
 /// Valid states of a solve,
 /// same as the "state" in csTimer.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum SolveState {
     Ok,
     Plus2,

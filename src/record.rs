@@ -5,7 +5,7 @@ use chrono::DateTime;
 use crate::types::*;
 
 /// A cubing record.
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct Record {
     solve_state: SolveState,
     time: Milliseconds,
