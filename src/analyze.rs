@@ -119,14 +119,14 @@ fn append_section(
                 if !pairs.is_empty() {
                     let pb_history = pairs
                         .iter()
-                        .map(|p| p.0.readable())
+                        .map(|p| p.1.readable())
                         .collect::<Vec<_>>()
                         .join(" -> ");
                     writeln!(file, "```\n{}\n```\n", pb_history)?;
 
                     if matches!(stats_type, StatsType::Single) {
                         for pair in &pairs {
-                            writeln!(file, "{}", pair.1)?;
+                            writeln!(file, "\\[#{}] {}", pair.0, pair.2)?;
                         }
                     }
 
@@ -202,7 +202,7 @@ fn append_section(
             let commented = session.commented_records();
             if !commented.is_empty() {
                 for (i, r) in commented {
-                    writeln!(file, "[{}] {}", i, r)?;
+                    writeln!(file, "\\[#{}] {}", i, r)?;
                 }
             } else {
                 append_message(

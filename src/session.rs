@@ -192,7 +192,10 @@ impl Session {
 
     /// Gets all the records that breaks the specified
     /// kind of personal best, along with the new PB.
-    pub fn pb_breakers(&self, s_type: &StatsType) -> Option<Vec<(Milliseconds, Rc<Record>)>> {
+    pub fn pb_breakers(
+        &self,
+        s_type: &StatsType,
+    ) -> Option<Vec<(usize, Milliseconds, Rc<Record>)>> {
         let s_scale = match s_type {
             StatsType::Single => 1,
             StatsType::Average(scale) => *scale,
@@ -210,7 +213,7 @@ impl Session {
             if let Some(stats) = self.stats(i, s_type) {
                 if stats < pb {
                     pb = stats;
-                    result.push((pb, record.clone()));
+                    result.push((i + 1, pb, record.clone()));
                 }
             }
         }
@@ -406,7 +409,7 @@ impl Session {
             .iter()
             .enumerate()
             .filter(|(_, r)| !r.comment().is_empty())
-            .map(|(i, r)| (i, Rc::clone(r)))
+            .map(|(i, r)| (i + 1, Rc::clone(r)))
             .collect()
     }
 }
