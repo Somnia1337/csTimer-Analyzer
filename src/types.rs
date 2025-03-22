@@ -38,7 +38,7 @@ impl TimeReadable for Milliseconds {
             format!("{}:{}", mins, secs_and_millis)
         } else {
             let hours = t / HOUR;
-            let mins = (t % HOUR) / 60000;
+            let mins = (t % HOUR) / MIN;
 
             format!("{}:{}:{}", hours, mins, secs_and_millis)
         }
